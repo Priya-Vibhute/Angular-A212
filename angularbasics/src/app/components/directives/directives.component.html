@@ -1,0 +1,150 @@
+<ul>
+  <li>Component</li>
+  <li>Structural Directives (ngIf ,ngFor)</li>
+  <hr>
+
+  <button class="btn btn-primary" *ngIf="loggedIn">Profile</button>
+  <button (click)="toggleLogin()">Click to login/logout</button>
+
+  <hr>
+
+  <ng-container *ngIf="loggedIn ; then ifblock else elseBlock"></ng-container>
+
+  <ng-template #ifblock>
+    <div class="container mt-5">
+      <div class="card shadow mx-auto" style="max-width: 350px;">
+
+        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Profile">
+
+        <div class="card-body text-center">
+          <h4 class="card-title">John Doe</h4>
+          <p class="text-muted">Web Developer</p>
+
+          <p class="card-text">
+            Passionate about creating beautiful and responsive websites.
+          </p>
+
+          <a href="#" class="btn btn-primary">View Profile</a>
+        </div>
+
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <div class="card-body text-center">
+
+      <div style="filter: blur(6px); user-select: none;">
+        <h4 class="card-title">John Doe</h4>
+        <p class="text-muted">Web Developer</p>
+
+        <p class="card-text">
+          Passionate about creating beautiful and responsive websites.
+        </p>
+
+        <button class="btn btn-primary">View Profile</button>
+      </div>
+
+      <!-- Login Button -->
+      <button class="btn btn-primary w-100 mt-3">
+        Please Login
+      </button>
+
+    </div>
+
+
+  </ng-template>
+
+  <hr>
+
+  <ul class="list-group m-3 p-3">
+
+    <li class="list-group-item" *ngFor="let i of names; first as f ;last as l;index as idx">
+      {{i}} {{l}} {{idx}}
+      <span class="badge bg-primary" *ngIf="f">New</span>
+    </li>
+
+  </ul>
+
+  <hr>
+
+
+
+
+  <div class="row">
+    <!-- Student Card -->
+    <div class="col-md-4 mb-4" *ngFor="let s of students">
+      <div class="card shadow h-100">
+
+        <div class="card-body text-center">
+
+          <div class="rounded-circle bg-primary text-white
+                      d-flex align-items-center justify-content-center
+                      mx-auto mb-3" style="width: 80px; height: 80px;">
+            <h3 class="mb-0">RS</h3>
+          </div>
+
+          <h4 class="card-title">{{s.name}}</h4>
+
+          <p class="text-muted mb-3">
+            {{s.course}}
+          </p>
+
+          <hr>
+
+          <div class="text-start">
+            <p class="mb-2">
+              <strong>Age:</strong> {{s.age}}
+            </p>
+
+            <p class="mb-2">
+              <strong>Email:</strong> {{s.email}}
+            </p>
+
+            <p class="mb-2">
+              <strong>City:</strong> Mumbai
+            </p>
+
+            <p class="mb-0">
+              <strong>Marks:</strong>
+              <span class="badge bg-success">85%</span>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <li>Attribute Directives ( ngStyle,ngClass )</li>
+  <hr>
+
+  <h4 [ngStyle]="getStyle(3)">Directives</h4>
+  <h4 [ngClass]="classes">Directives</h4>
+
+  <button class="btn btn-danger m-3" (click)="addClass('bg-danger')">Add background color</button>
+  <button class="btn btn-danger m-3" (click)="addClass('text-white')">Change text color</button>
+  <button class="btn btn-danger m-3" (click)="addClass('text-center')">center text</button>
+  <button class="btn btn-danger m-3" (click)="addClass('p-5')">Add padding</button>
+
+
+  <button class="btn btn-warning m-3" (click)="undo()">Undo</button>
+
+  <hr>
+
+  <div class="card  mb-3" style="max-width: 18rem;" [ngClass]="{'text-dark':!theme,'bg-light':!theme,'bg-dark':theme,'text-white':theme}">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Light card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" (click)="changeTheme()">Change Theme</button>
+
+
+</ul>

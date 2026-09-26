@@ -1,0 +1,28 @@
+<ul>
+    <li>One way data binding</li>
+    <ul>
+        <li>Interpolation</li>
+        <div class="m-2 border border-dark p-3">
+            <p>My name is {{name}}</p>
+            <p>age is {{age}}</p>
+            <p>{{age+78}}</p>
+        </div>
+        <li>Property Binding</li>
+        <div>
+            <input type="text" [value]="name">
+
+        </div>
+        <li>Event Binding</li>
+        <button (click)="onBtnClick()">Click</button>
+        <li>Style Binding</li>
+        <h4 [style.color]="color">Hello</h4>
+        <button (click)="changeColor('red')">Red</button>
+        <button (click)="changeColor('green')">Green</button>
+        <button (click)="changeColor('blue')">Blue</button>
+    </ul>
+    <li>Two way data binding</li>
+    <ul>
+        <li>ngModel</li>
+        <input type="text" [(ngModel)]="name">
+    </ul>
+</ul>
