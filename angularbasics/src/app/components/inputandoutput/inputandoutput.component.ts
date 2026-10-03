@@ -9,4 +9,9 @@ import { ProductComponent } from '../product/product.component';
 })
 export class InputandoutputComponent {
     product={ id:101,name:"Laptop",price:45000}
+
+    receiveData(data :string)
+    {
+         alert("Received from child"+data)
+    }
 }

@@ -1,0 +1,27 @@
+<app-child [name]="username" *ngIf="isVisible">
+
+     <h1>Hello we are learning angular</h1>
+     <p>Angular 19 is easy</p>
+
+</app-child>
+
+<hr>
+
+<app-child [name]="username" *ngIf="isVisible">
+
+     <ul>
+        <li>Javascript</li>
+        <li>Typescript</li>
+        <li>Angular</li>
+     </ul>
+
+</app-child>
+
+
+<button class="btn btn-primary m-2" (click)="toggleIsVisible()">Display/hide child</button>
+
+<button class="btn btn-primary m-2" (click)="changeUsername('Anisha')">Anisha</button>
+
+<button class="btn btn-primary m-2" (click)="changeUsername('Tanisha')">Tanisha</button>
+
+<button class="btn btn-primary m-2" (click)="changeUsername('Kanisha')">Kanisha</button>

@@ -1,4 +1,5 @@
 <p>inputandoutput works!</p>
-<app-product [id]="product.id" [name]="product.name" [price]="product.price"></app-product>
+<app-product [id]="product.id" [name]="product.name" [price]="product.price"
+ (eventemitter)="receiveData($event)"></app-product>
 <app-product [id]=102 [name]="'mobile'" [price]=35000></app-product>
 <app-product [id]="product.id" [name]="product.name" [price]="product.price"></app-product>

@@ -5,6 +5,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { InputandoutputComponent } from './components/inputandoutput/inputandoutput.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path:'input-and-output',
         component:InputandoutputComponent
+    },
+    {
+        path:'lifecycle',
+        component:LifecycleComponent
     }
 ];
