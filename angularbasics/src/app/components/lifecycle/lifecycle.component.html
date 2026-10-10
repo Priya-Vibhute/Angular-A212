@@ -2,6 +2,7 @@
 
      <h1>Hello we are learning angular</h1>
      <p>Angular 19 is easy</p>
+     <h3>Message: {{message}}</h3>
 
 </app-child>
 
@@ -15,7 +16,18 @@
         <li>Angular</li>
      </ul>
 
+     <h3>Message: {{message}}</h3>
+
+
 </app-child>
+
+
+<hr>
+
+      <button class="btn btn-primary m-2" (click)="changeMessage('Good Afternoon')">Good Afternoon</button>
+      <button class="btn btn-primary m-2" (click)="changeMessage('Good night')">Good Night</button>
+
+<hr>
 
 
 <button class="btn btn-primary m-2" (click)="toggleIsVisible()">Display/hide child</button>

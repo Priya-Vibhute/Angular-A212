@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
-import { ServicesComponent } from './components/services/services.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { InputandoutputComponent } from './components/inputandoutput/inputandoutput.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ServiceComponent } from './components/service/service.component';
 
 export const routes: Routes = [
     {
@@ -15,10 +15,6 @@ export const routes: Routes = [
     {
         path:'data-binding',
         component:DatabindingComponent
-    },
-    {
-        path:'services',
-        component:ServicesComponent
     },
     {
         path:'pipes',
@@ -35,5 +31,9 @@ export const routes: Routes = [
     {
         path:'lifecycle',
         component:LifecycleComponent
+    },
+    {
+        path:'service',
+        component:ServiceComponent
     }
 ];

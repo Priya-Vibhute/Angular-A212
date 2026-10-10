@@ -12,6 +12,13 @@ export class LifecycleComponent {
 
      username="Manisha"
      isVisible:boolean=true;
+     message="Good Morning"
+
+    //  changeMessage("Good Afternoon")
+     changeMessage(message:string)
+     {
+     this.message=message
+     }
 
     //   changeUsername("Anisha")
      changeUsername(name: string)
